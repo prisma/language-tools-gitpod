@@ -4,7 +4,7 @@ set -eu
 # download
 curl -L -o extension.vsix $vsix
 # wait for vscode "extension port" to be ready
-gp await-port 23000
+gp ports await 23000
 # install
 code --install-extension extension.vsix
 
